@@ -22,10 +22,10 @@ def memoize(f)
   memo = {}
   def helper(x)
 #helper function helps capture memo and f 
-    if x no in memo:
+    if x not in memo:
 # an integer x in fib(x) will only be called if it is not in the memo dictionary, if it is there then return memo[x] as a result of f(x)
        memo[x] = f(x)
-    return memo(x)
+    return memo[x]
   return helper
 def fibonacci(n):
     if n in [0, 1]:
